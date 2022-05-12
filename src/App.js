@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bulma/css/bulma.min.css";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import { Container, Footer, Hero, Section } from "react-bulma-components";
+import Information from "./components/Information";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Information />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 
