@@ -3,7 +3,7 @@ import { Container, Hero } from 'react-bulma-components'
 
 const Projects = () => {
   return (
-    <Hero size={"fullheight"} color="success" id="portfolio">
+    <Hero size={"fullheight"} color='black' id="portfolio">
       <Hero.Body>
         <Container>Projects</Container>
       </Hero.Body>

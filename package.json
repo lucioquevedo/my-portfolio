@@ -11,6 +11,8 @@
     "react-bulma-components": "^4.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "react-scrollmagic": "^2.3.0",
+    "scrollmagic": "^2.0.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

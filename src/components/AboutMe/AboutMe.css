@@ -1,0 +1,40 @@
+#brief-info {
+  width: 70%;
+  margin-left: auto;
+  color: black;
+  opacity: 0;
+  transform:translateX(-50px);
+  transition: all 1s ease-out;
+}
+
+#image-content {
+  width: 50%;
+  margin-right: auto;
+  text-align: center; 
+}
+
+#lol {
+  opacity: 0;
+  transform:translateY(50px);
+  transition: all 1s ease-out;
+}
+
+#profile {
+  transition: all 1s;
+  border-radius: 50%;
+}
+
+#profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.5em 1em -0.125em hsl(0deg 0% 4% / 10%), 0 0 0 1px hsl(0deg 0% 4% / 2%);
+}
+
+.fade-in-horizontal {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) !important;
+}
