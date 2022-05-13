@@ -1,12 +1,21 @@
 import React from "react";
-import { Container, Hero } from "react-bulma-components";
+import { Container, Content, Hero, Icon } from "react-bulma-components";
 
 
 const Contact = () => {
   return (
     <Hero size={"fullheight"} color="info" id="contact">
       <Hero.Body>
-        <Container>Contact</Container>
+        <Container>
+          <Content>
+            <Icon size={'large'}>
+              <i className='fa-brands fa-linkedin'/>
+            </Icon>
+            <Icon>
+              <i className="fa-brands fa-github-square"></i>
+            </Icon>
+          </Content>
+        </Container>
       </Hero.Body>
     </Hero>
   );

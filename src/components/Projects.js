@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <Hero size={"fullheight"} color="success" id="portfolio">
       <Hero.Body>
-        <Container>info</Container>
+        <Container>Projects</Container>
       </Hero.Body>
     </Hero>
   )
