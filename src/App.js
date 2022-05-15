@@ -7,7 +7,6 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
 import ScrollMagic from "scrollmagic";
-import { Controller, Scene } from "react-scrollmagic";
 
 function App() {
   const controller = new ScrollMagic.Controller({
@@ -17,7 +16,9 @@ function App() {
     },
   });
 
-  /* useEffect(() => {
+  const otherController = new ScrollMagic.Controller()
+
+  useEffect(() => {
     console.log(1)
     var isMobile = (function (a) {
       return (
@@ -44,23 +45,16 @@ function App() {
           .addTo(controller);
       }
     }
-  }); */
+  });
 
   return (
     <>
       <NavBar />
-      <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-        <Scene pin>
-          <AboutMe controller={controller}/>
-        </Scene>
-        <Scene pin>
-          <Projects />
-        </Scene>
-        <Scene pin>
-          <Contact />
-        </Scene>
-      </Controller>
-      <Footer />
+        <AboutMe controller={otherController}/>
+        
+        <Projects controller={otherController}/>
+          
+        <Contact />
     </>
   );
 }

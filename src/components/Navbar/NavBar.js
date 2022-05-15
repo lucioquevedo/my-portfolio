@@ -15,6 +15,10 @@ const NavBar = ({/* navbarController */}) => {
     navbarController.scrollTo('#portfolio')
   }
 
+  const handleContact = () => {
+    navbarController.scrollTo('#contact')
+  }
+
   const handleNavbar = () => {
     setBurger(!burger)
   }
@@ -28,9 +32,9 @@ const NavBar = ({/* navbarController */}) => {
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container align="right">
-            <Navbar.Item href="#" onClick={handleAboutMe}>About Me</Navbar.Item>
-            <Navbar.Item href="#portfolio" onClick={handlePortfolio}>Portfolio</Navbar.Item>
-            <Navbar.Item href="#contact">Contact</Navbar.Item>
+            <Navbar.Item onClick={handleAboutMe}>About Me</Navbar.Item>
+            <Navbar.Item onClick={handlePortfolio}>Portfolio</Navbar.Item>
+            <Navbar.Item onClick={handleContact}>Contact</Navbar.Item>
           </Navbar.Container>
         </Navbar.Menu>
       </Container>
