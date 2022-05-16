@@ -15,7 +15,7 @@ const Projects = ({ controller }) => {
   useEffect(() => {
     new ScrollMagic.Scene({
       triggerElement: "#portfolio",
-      triggerHook: 0.7,
+      triggerHook: 0.5,
     })
       .setClassToggle("#project-info", "fade-in")
       .addTo(controller);

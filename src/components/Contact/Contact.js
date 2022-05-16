@@ -1,6 +1,11 @@
 import React from "react";
-import { Container, Content, Hero, Icon } from "react-bulma-components";
-
+import {
+  Columns,
+  Container,
+  Content,
+  Hero,
+  Icon,
+} from "react-bulma-components";
 
 const Contact = () => {
   return (
@@ -8,17 +13,23 @@ const Contact = () => {
       <Hero.Body>
         <Container>
           <Content>
-            <p style={{fontSize: '7rem'}}>
-              <Icon size={'large'}>
-                <i className='fa-brands fa-linkedin'/>
-              </Icon>
-            </p>
-            <p style={{fontSize: '7rem'}}>
-              <Icon size={'large'}>
-                <i className='fa-brands fa-github-square'/>
-              </Icon>
-            </p>
-            
+            <Columns>
+              <Columns.Column>
+                <Content>
+                  <Icon size={"large"}>
+                    <i className="fa-brands fa-linkedin" />
+                  </Icon>
+                </Content>
+              </Columns.Column>
+              <Columns.Column>
+                <Content>
+                  <Icon size={"large"}>
+                    <i className="fa-brands fa-github-square" />
+                  </Icon>
+                </Content>
+              </Columns.Column>
+              <Columns.Column></Columns.Column>
+            </Columns>
           </Content>
         </Container>
       </Hero.Body>
@@ -27,3 +38,13 @@ const Contact = () => {
 };
 
 export default Contact;
+
+/* 
+
+            <p style={{fontSize: '7rem'}}>
+              <Icon size={'large'}>
+                <i className='fa-brands fa-github-square'/>
+              </Icon>
+            </p>
+            
+*/

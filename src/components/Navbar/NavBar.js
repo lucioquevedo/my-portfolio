@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Container, Navbar } from "react-bulma-components";
+import { Container, Image, Navbar } from "react-bulma-components";
 import ScrollMagic from "scrollmagic";
+import logo from './logo.png'
 
 const NavBar = ({/* navbarController */}) => {
   const [burger, setBurger] = useState(false)
@@ -27,7 +28,10 @@ const NavBar = ({/* navbarController */}) => {
     <Navbar fixed="top" size="large" transparent={true} active={burger}>
       <Container>
         <Navbar.Brand>
-          <Navbar.Item onClick={handleAboutMe}>My portfolio</Navbar.Item>
+          <Navbar.Item onClick={handleAboutMe}>
+            <Image src={logo} />
+            <p style={{marginLeft: '5px'}}>Lucio Quevedo</p>
+          </Navbar.Item>
           <Navbar.Burger onClick={handleNavbar}/>
         </Navbar.Brand>
         <Navbar.Menu>

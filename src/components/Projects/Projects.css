@@ -1,5 +1,6 @@
 #project-info {
   color: white;
+  padding: 10px;
   opacity: 0;
   text-align: justify;
   font-size: 1.2rem;
@@ -27,6 +28,8 @@
 
 #project-info button:hover {
   cursor: pointer;
+  background-color: #203A3B;
+  transition: 0.5s ease-out;
 }
 
 #test {

@@ -5,7 +5,7 @@
   margin-left: auto;
   color: white !important;
   opacity: 0;
-  padding: 20px;
+  padding: 10px;
   /* background-color: #360504; */
   transform:translateX(-50px);
   transition: all 1.5s ease-out;
@@ -26,7 +26,7 @@
 
 #lol {
   font-size: 1rem;
-  padding: 20px;
+  padding: 10px;
   /* background-color: #360504; */
   color: white;
   opacity: 0;
