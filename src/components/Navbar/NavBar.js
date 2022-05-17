@@ -3,7 +3,7 @@ import { Container, Image, Navbar } from "react-bulma-components";
 import ScrollMagic from "scrollmagic";
 import logo from './logo.png'
 
-const NavBar = ({/* navbarController */}) => {
+const NavBar = () => {
   const [burger, setBurger] = useState(false)
 
   const navbarController = new ScrollMagic.Controller()
@@ -25,7 +25,7 @@ const NavBar = ({/* navbarController */}) => {
   }
 
   return (
-    <Navbar fixed="top" size="large" transparent={true} active={burger}>
+    <Navbar fixed="top" transparent={true} active={burger}>
       <Container>
         <Navbar.Brand>
           <Navbar.Item onClick={handleAboutMe}>

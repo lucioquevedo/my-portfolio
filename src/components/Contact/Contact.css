@@ -1,0 +1,14 @@
+span.icon {
+    font-size: 10rem !important;
+    height: 10rem !important;
+    width: 10rem !important;
+}
+
+#contact .content {
+    text-align: center;
+}
+
+#contact .content p {
+    font-size: 1.5rem;
+}
+

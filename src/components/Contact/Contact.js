@@ -6,31 +6,43 @@ import {
   Hero,
   Icon,
 } from "react-bulma-components";
+import './Contact.css'
 
 const Contact = () => {
   return (
     <Hero size={"fullheight"} color="danger" id="contact">
       <Hero.Body>
         <Container>
-          <Content>
-            <Columns>
+            <Columns centered={true}>
               <Columns.Column>
                 <Content>
-                  <Icon size={"large"}>
+                  <Icon >
                     <i className="fa-brands fa-linkedin" />
                   </Icon>
+                  <p>
+                    My LinkedIn
+                  </p>
                 </Content>
               </Columns.Column>
               <Columns.Column>
                 <Content>
-                  <Icon size={"large"}>
+                  <Icon>
                     <i className="fa-brands fa-github-square" />
                   </Icon>
+                  <p>My Github</p>
                 </Content>
               </Columns.Column>
-              <Columns.Column></Columns.Column>
+              <Columns.Column>
+                <Content>
+                  <Icon>
+                    <i className="fa-solid fa-file-lines" />
+                  </Icon>
+                  <p>
+                    My Curriculum Vitae
+                  </p>
+                </Content>
+              </Columns.Column>
             </Columns>
-          </Content>
         </Container>
       </Hero.Body>
     </Hero>
@@ -38,13 +50,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-/* 
-
-            <p style={{fontSize: '7rem'}}>
-              <Icon size={'large'}>
-                <i className='fa-brands fa-github-square'/>
-              </Icon>
-            </p>
-            
-*/

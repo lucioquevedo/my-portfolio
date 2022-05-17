@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "bulma/css/bulma.min.css";
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
-import { Footer } from "react-bulma-components";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
@@ -19,8 +18,7 @@ function App() {
   const otherController = new ScrollMagic.Controller()
 
   useEffect(() => {
-    console.log(1)
-    var isMobile = (function (a) {
+    /* var isMobile = (function (a) {
       return (
         /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
           a
@@ -30,10 +28,8 @@ function App() {
         )
       );
     })(navigator.userAgent || navigator.vendor || window.opera);
-
-    
-
-    if (!isMobile) {
+ */
+    /* if (!isMobile) {
       var slides = document.querySelectorAll("section.hero");
 
       for (var i = 0; i < slides.length; i++) {
@@ -44,7 +40,7 @@ function App() {
           .setPin(slides[i], { pushFollowers: false })
           .addTo(controller);
       }
-    }
+    } */
   });
 
   return (
