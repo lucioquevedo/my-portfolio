@@ -1,58 +1,84 @@
 import React, { useEffect } from "react";
-import { Columns, Container, Content, Hero, Image } from "react-bulma-components";
-import profile from '../../lucio_profile.jpg'
-import './AboutMe.css'
+import {
+  Columns,
+  Container,
+  Content,
+  Hero,
+  Image,
+} from "react-bulma-components";
+import profile from "../../lucio_profile.jpg";
+import "./AboutMe.css";
 import ScrollMagic from "scrollmagic";
+import Skills from "../Skills/Skills";
 
-const AboutMe = ({controller}) => {
+const AboutMe = ({ controller }) => {
   useEffect(() => {
-    console.log('este es el about me')
     new ScrollMagic.Scene({
-      triggerElement: '.navbar',
+      triggerElement: ".navbar",
       triggerHook: 1,
-      reverse: false
+      reverse: false,
     })
-      .setClassToggle('#lol', 'fade-in')
+      .setClassToggle("#lol", "fade-in")
       .addTo(controller);
-    
+
     new ScrollMagic.Scene({
-      triggerElement: '.navbar',
+      triggerElement: ".navbar",
       triggerHook: 1,
-      reverse: false
+      reverse: false,
     })
-      .setClassToggle('#brief-info', 'fade-in')
-      .addTo(controller)
-    
-  }, [])
-  
+      .setClassToggle("#brief-info", "fade-in")
+      .addTo(controller);
+  }, []);
+
   return (
     <Hero size={"fullheight"} id="about-me" hasNavbar={true}>
       <Hero.Body>
-        <Container id='abme-container'>
-          <Columns className="is-align-items-center" multiline={true} centered={true}>
-            <Columns.Column style={{textAlign:"right"}} size='half'>
-              <Content id='brief-info'>
+        <Container id="abme-container">
+          <Columns
+            className="is-align-items-center"
+            multiline={true}
+            centered={true}
+          >
+            <Columns.Column style={{ textAlign: "right" }} size="half">
+              <Content id="brief-info">
                 <h1>Hi, I'm Lucio.</h1>
                 <p>
-                  I'm a front-end developer based in Argentina and I've been programming since June of 2020.
+                  I'm a front-end developer based in Argentina and I've been
+                  programming since June of 2020.
                 </p>
               </Content>
             </Columns.Column>
-            <Columns.Column style={{textAlign: 'center'}} size='half'>
-              <Content id='image-content'>
-                <Image src={profile} size={'1by1'} fullwidth={true} rounded={true} id='profile' />
+            <Columns.Column style={{ textAlign: "center" }} size="half">
+              <Content id="image-content">
+                <Image
+                  src={profile}
+                  size={"1by1"}
+                  fullwidth={true}
+                  rounded={true}
+                  id="profile"
+                />
               </Content>
             </Columns.Column>
-            <Columns.Column style={{textAlign: 'justify'}} size='half'>
-              <Content id='lol'>
+            <Columns.Column style={{ textAlign: "justify", alignSelf: 'flex-start' }} size="half">
+              <Content id="lol">
                 <h1>About Me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus eu sem id bibendum. Nullam vulputate nisi eget odio bibendum, in finibus nisi varius. Quisque mattis sed dui ut lobortis. Aliquam metus turpis, consequat vitae leo rutrum, suscipit molestie neque. Nam dapibus purus ac nisl varius sodales. Morbi ultricies turpis orci, id viverra ex sodales in. Quisque sagittis magna tempor nulla consequat, eu blandit mauris pharetra. Cras a massa id turpis condimentum aliquam ac dictum justo. Ut ullamcorper ipsum in ligula tempus, non sollicitudin eros ultrices. Sed suscipit scelerisque mi ut vulputate. Proin dui orci, tincidunt vel erat quis, facilisis molestie nibh. Aenean semper libero nunc, a fringilla libero imperdiet id.</p>
+                <p>
+                  Programming caught my attention back in 2020 when I enrolled
+                  to Harvard's CS50 Introduction to Computer Science.
+                  Afterwards, I keept looking for courses and certifications to
+                  satisfy my curiosity. As I delved deeper and deeper into this
+                  world it became clear to me that I wanted to follow this path
+                  as my career. I'm really interested in art and design so it
+                  was only natural for me to start as a Front-End Developer.
+                  Although, I also have plans of becoming a Full-Stack developer
+                  in the future.
+                </p>
               </Content>
             </Columns.Column>
-            <Columns.Column style={{textAlign: 'justify'}} size='half'>
-              <Content id='lol'>
-                <h1>About Me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus eu sem id bibendum. Nullam vulputate nisi eget odio bibendum, in finibus nisi varius. Quisque mattis sed dui ut lobortis. Aliquam metus turpis, consequat vitae leo rutrum, suscipit molestie neque. Nam dapibus purus ac nisl varius sodales. Morbi ultricies turpis orci, id viverra ex sodales in. Quisque sagittis magna tempor nulla consequat, eu blandit mauris pharetra. Cras a massa id turpis condimentum aliquam ac dictum justo. Ut ullamcorper ipsum in ligula tempus, non sollicitudin eros ultrices. Sed suscipit scelerisque mi ut vulputate. Proin dui orci, tincidunt vel erat quis, facilisis molestie nibh. Aenean semper libero nunc, a fringilla libero imperdiet id.</p>
+            <Columns.Column style={{ textAlign: "justify", alignSelf: 'flex-start' }} size="half">
+              <Content id="lol">
+                <h1>Skills</h1>
+                <Skills />
               </Content>
             </Columns.Column>
           </Columns>

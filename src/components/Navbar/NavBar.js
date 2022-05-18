@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Image, Navbar } from "react-bulma-components";
 import ScrollMagic from "scrollmagic";
 import logo from './logo.png'
+import './Navbar.css'
 
 const NavBar = () => {
   const [burger, setBurger] = useState(false)

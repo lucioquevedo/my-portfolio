@@ -9,6 +9,7 @@ import {
 import "./Projects.css";
 import rblogo from "./rb-logo.png";
 import ScrollMagic from "scrollmagic";
+import Carousel, { CarouselItem } from "../Carousel/Carousel";
 
 const Projects = ({ controller }) => {
   useEffect(() => {
@@ -26,29 +27,38 @@ const Projects = ({ controller }) => {
         <Container>
           <Columns className="is-align-items-center">
             <Columns.Column size={"half"}>
-              <Content style={{ width: "60%", margin: "auto" }}>
-                <Image src={rblogo} />
-              </Content>
+              <Carousel>
+                <CarouselItem>
+                  <Image src={rblogo} />
+                </CarouselItem>
+                <CarouselItem>Item 2</CarouselItem>
+                <CarouselItem>Item 3</CarouselItem>
+              </Carousel>
             </Columns.Column>
             <Columns.Column size={"half"}>
               <Content id="project-info">
                 <h1>Red Book</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                  rhoncus eu sem id bibendum. Nullam vulputate nisi eget odio
-                  bibendum, in finibus nisi varius. Quisque mattis sed dui ut
-                  lobortis. Aliquam metus turpis, consequat vitae leo rutrum,
-                  suscipit molestie neque. Nam dapibus purus ac nisl varius
-                  sodales. Morbi ultricies turpis orci, id viverra ex sodales
-                  in. Quisque sagittis magna tempor nulla consequat, eu blandit
-                  mauris pharetra. Cras a massa id turpis condimentum aliquam ac
-                  dictum justo. Ut ullamcorper ipsum in ligula tempus, non
-                  sollicitudin eros ultrices. Sed suscipit scelerisque mi ut
-                  vulputate. Proin dui orci, tincidunt vel erat quis, facilisis
-                  molestie nibh. Aenean semper libero nunc, a fringilla libero
-                  imperdiet id.
+                  Red Book is an online book store created as my final projecf
+                  for Coder House. The assigment required me to create a fully
+                  functional e-commerce web application that uses Firebase to
+                  store its data. It was designed and developed through the
+                  months of March and April of 2022 using React JS and Bulma.
+                  You can check it out by visiting{" "}
+                  <a
+                    href="https://red-book.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    red-book.vercel.app
+                  </a>{" "}
+                  or clicking the button below!
                 </p>
-                <a href="https://red-book.vercel.app/">
+                <a
+                  href="https://red-book.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button>Visit Red Book</button>
                 </a>
               </Content>
@@ -61,3 +71,9 @@ const Projects = ({ controller }) => {
 };
 
 export default Projects;
+
+/* 
+<Content style={{ width: "60%", margin: "auto" }}>
+                
+              </Content> 
+              */

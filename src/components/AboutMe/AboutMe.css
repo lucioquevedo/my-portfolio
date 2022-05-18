@@ -12,12 +12,6 @@
   text-align: justify;
 }
 
-#brief-info ::selection {
-  background: #FFECD7;
-  color: black;
-}
-
-
 #image-content {
   width: 60%;
   margin: auto;
@@ -25,7 +19,7 @@
 }
 
 #lol {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 10px;
   /* background-color: #360504; */
   color: white;
@@ -34,7 +28,7 @@
   transition: all 1.5s ease-out;
 }
 
-#lol ::selection {
+#about-me ::selection {
   background: #FFECD7;
   color: black;
 }

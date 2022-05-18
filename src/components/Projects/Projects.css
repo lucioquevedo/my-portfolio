@@ -12,7 +12,7 @@
   color: #FFECD7 !important;
 }
 
-#project-info ::selection {
+#portfolio ::selection {
   background: #FFECD7;
   color: black;
 }
@@ -24,7 +24,6 @@
   border: none;
   font-size: 1rem;
   color: #FFECD7;
-  border: 0 50%;
 }
 
 #project-info button:hover {
@@ -33,9 +32,6 @@
   transition: 0.5s ease-out;
 }
 
-#test {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: rotate(-90deg);
+#project-info p a:visited {
+  color: #FFECD7;
 }

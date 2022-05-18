@@ -1,7 +1,9 @@
-span.icon {
+#contact span.icon {
     font-size: 10rem !important;
     height: 10rem !important;
     width: 10rem !important;
+    opacity: 0;
+    transition: all 1s ease-out;
 }
 
 #contact .content {
@@ -12,3 +14,16 @@ span.icon {
     font-size: 1.5rem;
 }
 
+#contact footer .content p {
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+#contact ::selection {
+    background: #FFECD7;
+    color: black;
+}
+
+footer.hero-foot {
+    padding-bottom: 10px;
+}
