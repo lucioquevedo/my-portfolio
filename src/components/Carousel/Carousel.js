@@ -30,7 +30,7 @@ const Carousel = ({ children }) => {
       if (!paused) {
         updateIndex(activeIndex + 1);
       }
-    }, 5000);
+    }, 3000);
 
     return () => {
       if (interval) {
@@ -64,32 +64,16 @@ const Carousel = ({ children }) => {
         })}
       </div>
       <div className="indicators">
-        <button
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
-        >
-          {'<'}
-        </button>
         {React.Children.map(children, (child, index) => {
           return (
-            <button
+            <span
               className={`${index === activeIndex ? "active" : ""}`}
               onClick={() => {
                 updateIndex(index);
               }}
-            >
-              {index + 1}
-            </button>
+            ></span>
           );
         })}
-        <button
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}
-        >
-          {'>'}
-        </button>
       </div>
     </div>
   );

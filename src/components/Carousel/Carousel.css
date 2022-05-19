@@ -4,7 +4,7 @@
 
 .inner {
   white-space: nowrap;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .carousel-item {
@@ -14,6 +14,7 @@
   height: 100%;
   background-color: #4F1C1B;
   color: white;
+  align-self: center;
 }
 
 .indicators {
@@ -29,4 +30,21 @@
 .indicators > button.active {
   background-color: green;
   color: white;
+}
+
+.indicators > span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  margin-top: 2rem;
+  background-color: #FFECD7;
+}
+
+.indicators > span:hover {
+  cursor: pointer;
+}
+
+.indicators > span.active {
+  background-color: #E3C5A3;
 }

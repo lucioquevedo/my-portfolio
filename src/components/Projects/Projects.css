@@ -35,3 +35,22 @@
 #project-info p a:visited {
   color: #FFECD7;
 }
+
+.carousel-image {
+  padding: 5px;
+  background-color: #FFECD7;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  #portfolio .columns {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #portfolio .columns > .column {
+    width: 100%;
+  }
+  #project-info {
+    padding: 0;
+  }
+}

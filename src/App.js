@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "bulma/css/bulma.min.css";
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
@@ -8,23 +8,16 @@ import Projects from "./components/Projects/Projects";
 import ScrollMagic from "scrollmagic";
 
 function App() {
-  const controller = new ScrollMagic.Controller({
-    globalSceneOptions: {
-      triggerHook: "onLeave",
-      duration: "0",
-    },
-  });
-
-  const otherController = new ScrollMagic.Controller()
+  const controller = new ScrollMagic.Controller()
 
   return (
     <>
       <NavBar />
-        <AboutMe controller={otherController}/>
+        <AboutMe controller={controller}/>
         
-        <Projects controller={otherController}/>
+        <Projects controller={controller}/>
           
-        <Contact controller={otherController} />
+        <Contact controller={controller} />
     </>
   );
 }

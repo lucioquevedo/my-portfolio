@@ -7,7 +7,9 @@ import {
   Image,
 } from "react-bulma-components";
 import "./Projects.css";
-import rblogo from "./rb-logo.png";
+import rbmain from "./Images/rb-main.png";
+import rbdetail from "./Images/rb-detail.png";
+import rbcart from "./Images/rb-cart.png";
 import ScrollMagic from "scrollmagic";
 import Carousel, { CarouselItem } from "../Carousel/Carousel";
 
@@ -25,17 +27,21 @@ const Projects = ({ controller }) => {
     <Hero size={"fullheight"} id="portfolio">
       <Hero.Body>
         <Container>
-          <Columns className="is-align-items-center">
-            <Columns.Column size={"half"}>
+          <Columns className="is-align-items-center" centered={true}>
+            <Columns.Column size={"three-fifths"}>
               <Carousel>
                 <CarouselItem>
-                  <Image src={rblogo} />
+                  <Image src={rbmain} />
                 </CarouselItem>
-                <CarouselItem>Item 2</CarouselItem>
-                <CarouselItem>Item 3</CarouselItem>
+                <CarouselItem>
+                  <Image src={rbdetail} />
+                </CarouselItem>
+                <CarouselItem>
+                  <Image src={rbcart} />
+                </CarouselItem>
               </Carousel>
             </Columns.Column>
-            <Columns.Column size={"half"}>
+            <Columns.Column size={"two-fifths"}>
               <Content id="project-info">
                 <h1>Red Book</h1>
                 <p>
@@ -71,9 +77,3 @@ const Projects = ({ controller }) => {
 };
 
 export default Projects;
-
-/* 
-<Content style={{ width: "60%", margin: "auto" }}>
-                
-              </Content> 
-              */

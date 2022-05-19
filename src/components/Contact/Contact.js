@@ -8,6 +8,47 @@ import {
 } from "react-bulma-components";
 import ScrollMagic from "scrollmagic";
 import "./Contact.css";
+import gif from "./gif-for-portfolio.gif";
+
+const contactInfo = [
+  {
+    title: "lucio.thomas.quevedo@gmail.com",
+    fontawesome: "fa-solid fa-envelope-open",
+    link: "mailto:lucio.thomas.quvedo@gmail.com",
+  },
+  {
+    title: "lucio-quevedo",
+    fontawesome: "fa-brands fa-linkedin",
+    link: "https://www.linkedin.com/in/lucio-quevedo/",
+  },
+  {
+    title: "My Github",
+    fontawesome: "fa-brands fa-github-square",
+    link: "https://github.com/Draug0",
+  },
+  {
+    title: "My Curriculum Vitae",
+    fontawesome: "fa-solid fa-file-lines",
+    link: "https://drive.google.com/file/d/1lFtMC5y6lFchHbjLkBNNIRFgIemmh_uW/view?usp=sharing",
+  },
+];
+
+const ContactItem = ({ contactLink }) => {
+  return (
+    <Columns.Column mobile={{size: 12}} tablet={{size: 'half'}} >
+      <a href={contactLink.link} target="_blank" rel="noopener noreferrer">
+        <div className="icon-text">
+          <Icon size={'medium'}>
+            <i className={`${contactLink.fontawesome} fa-fw fa-lg`} />
+          </Icon>
+          <span style={{ alignSelf: "center", fontSize: '1.1rem' }}>
+            <p>{contactLink.title}</p>
+          </span>
+        </div>
+      </a>
+    </Columns.Column>
+  );
+};
 
 const Contact = ({ controller }) => {
   useEffect(() => {
@@ -23,47 +64,22 @@ const Contact = ({ controller }) => {
     <Hero size={"fullheight"} color="danger" id="contact">
       <Hero.Body>
         <Container>
-          <Columns centered={true}>
-            <Columns.Column>
+          <Columns centered={true} className="is-align-items-center">
+            <Columns.Column size={"three-fifths"}>
               <Content>
-                <a
-                  href="https://www.linkedin.com/in/lucio-quevedo/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon>
-                    <i className="fa-brands fa-linkedin" />
-                  </Icon>
-                </a>
-                <p>My LinkedIn</p>
+                <h1>Contact me!</h1>
+                <Columns multiline={true} breakpoint={'mobile'}>
+                  {contactInfo.map((item, index) => (
+                    <ContactItem key={index} contactLink={item} />
+                  ))}
+                </Columns>
               </Content>
             </Columns.Column>
-            <Columns.Column>
-              <Content>
-                <a
-                  href="https://github.com/Draug0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon>
-                    <i className="fa-brands fa-github-square" />
-                  </Icon>
-                </a>
-                <p>My Github</p>
-              </Content>
-            </Columns.Column>
-            <Columns.Column>
-              <Content>
-                <a
-                  href="https://drive.google.com/file/d/1lFtMC5y6lFchHbjLkBNNIRFgIemmh_uW/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon>
-                    <i className="fa-solid fa-file-lines" />
-                  </Icon>
-                </a>
-                <p>My Curriculum Vitae</p>
+            <Columns.Column size={"two-fifths"}>
+              <Content id='image-cc'>
+                <div id="contact-image">
+                  <img src={gif} alt='contact-gif' />
+                </div>
               </Content>
             </Columns.Column>
           </Columns>
