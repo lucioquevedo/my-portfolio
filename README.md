@@ -11,13 +11,13 @@ This is my personal portfolio. I used React, Bulma, Fontawesome, and ScrollMagic
 Clone the project
 
 ```bash
-  git clone https://github.com/agustinquevedo/themoviedb
+  git clone https://github.com/Draug0/my-portfolio
 ```
 
 Go to the project directory
 
 ```bash
-  cd themoviedb
+  cd my-portfolio
 ```
 
 Install dependencies
