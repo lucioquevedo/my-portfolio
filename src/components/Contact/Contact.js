@@ -87,7 +87,7 @@ const Contact = ({ controller }) => {
       </Hero.Body>
       <Hero.Footer>
         <Content size={"small"}>
-          <p>Created by Lucio Quevedo</p>
+          <p>Created by Lucio Quevedo. Link to <a href="https://github.com/Draug0/my-portfolio">Github repository</a>.</p>
         </Content>
       </Hero.Footer>
     </Hero>
