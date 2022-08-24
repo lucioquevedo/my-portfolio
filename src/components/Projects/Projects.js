@@ -45,8 +45,8 @@ const Projects = ({ controller }) => {
               <Content id="project-info">
                 <h1>Red Book</h1>
                 <p>
-                  Red Book is an online book store created as my final projecf
-                  for Coder House. The assigment required me to create a fully
+                  Red Book is an online book store created as my final project
+                  for Coder House. This assigment required me to create a fully
                   functional e-commerce web application that uses Firebase to
                   store its data. It was designed and developed through the
                   months of March and April of 2022 using React JS and Bulma.

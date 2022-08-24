@@ -71,13 +71,13 @@ const AboutMe = ({ controller }) => {
                 <p>
                   Programming caught my attention back in 2021 when I enrolled
                   to Harvard's CS50 Introduction to Computer Science.
-                  Afterwards, I keept looking for courses and certifications to
+                  Afterwards, I kept looking for courses and certifications to
                   satisfy my curiosity. As I delved deeper and deeper into this
-                  world it became clear to me that I wanted to follow this path
+                  world, it became clear to me that I wanted to follow this path
                   as my career. I'm really interested in art and design so it
                   was only natural for me to start as a Front-End Developer.
                   Although, I also have plans of becoming a Full-Stack Developer
-                  in the future.
+                  in the future. Nowadays, I'm working as Front-End Developer at MOX.
                 </p>
               </Content>
             </Columns.Column>
