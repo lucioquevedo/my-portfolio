@@ -5,16 +5,13 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section
-      id="about"
-      className="min-h-hero h-fit relative flex flex-col justify-center gap-y-20"
-    >
+    <section className="min-h-screen h-fit flex flex-col justify-center gap-y-20">
       <Container>
         <motion.h1 className="self-end text-7xl md:text-9xl font-semibold overflow-hidden">
           <motion.span
             initial={{ y: "100%" }}
             animate={{ y: "0" }}
-            transition={{ delay: 0.2, type: "just" }}
+            transition={{ delay: 0.2 }}
             className="block"
           >
             Lucio Quevedo
@@ -31,22 +28,20 @@ const Hero = () => {
         </motion.p>
       </Container>
       <Container>
-        <motion.p className="text-sm font-light my-5 bg-[length:200%_200%] overflow-hidden">
-          <motion.span
-            initial={{ y: "100%" }}
-            animate={{ y: "0" }}
-            transition={{ delay: 1, type: "just" }}
-            className="block"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut
-            felis in turpis consequat scelerisque ut at diam. Quisque ultrices
-            tellus ac pellentesque pellentesque. Pellentesque sit amet
-            ullamcorper urna. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Cras congue nec est sit amet blandit. Pellentesque habitant
-            morbi tristique senectus et netus et malesuada fames ac turpis
-            egestas. Sed sed consequat metus. Donec posuere est ut sapien
-            elementum bibendum. Sed lacinia laoreet libero ac placerat.
-          </motion.span>
+        <motion.p
+          className="text-sm font-light my-5 bg-[length:200%_200%]"
+          initial={{ x: "-100px", opacity: 0 }}
+          animate={{ x: "0", opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut
+          felis in turpis consequat scelerisque ut at diam. Quisque ultrices
+          tellus ac pellentesque pellentesque. Pellentesque sit amet ullamcorper
+          urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+          congue nec est sit amet blandit. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis egestas. Sed sed
+          consequat metus. Donec posuere est ut sapien elementum bibendum. Sed
+          lacinia laoreet libero ac placerat.
         </motion.p>
       </Container>
     </section>
