@@ -30,9 +30,9 @@ const Hero = () => {
       <Container>
         <motion.p
           className="text-sm font-light my-5 bg-[length:200%_200%]"
-          initial={{ x: "-100px", opacity: 0 }}
-          animate={{ x: "0", opacity: 1 }}
-          transition={{ delay: 1 }}
+          initial={{ /* x: "-100px", */ opacity: 0 }}
+          animate={{ /* x: "0", */ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.4 }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut
           felis in turpis consequat scelerisque ut at diam. Quisque ultrices
