@@ -7,9 +7,12 @@ const Anchor = ({
   ...props
 }: IProps) => {
   return (
-    <a {...props} className="group flex w-fit items-center">
-      <span className="group-hover:overline">{children}</span>
-      <span className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">
+    <a
+      {...props}
+      className="group flex w-fit items-center gap-1 text-[--decoration] hover:text-[--foreground]"
+    >
+      <span className="group-hover:underline">{children}</span>
+      <span className="group-hover:scale-105 group-hover:rotate-90 transition-transform">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -21,7 +24,7 @@ const Anchor = ({
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
           />
         </svg>
       </span>
