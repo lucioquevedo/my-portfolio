@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const ProfileImg = () => {
   return (
     <motion.figure
-      className="mx-auto md:absolute md:top-0 md:right-0 my-4 rotate-[30deg] w-[140px] h-[140px] bg-[--foreground]"
+      className="justify-self-center md:absolute md:top-0 md:right-6 rotate-[30deg] w-[140px] h-[140px] bg-[--decoration]"
       initial={{ scale: 0, rotate: 0, clipPath: "inset( -100vw 0 0 -100vw )" }}
       animate={{
         scale: 1,
@@ -15,9 +15,9 @@ const ProfileImg = () => {
       transition={{ delay: 0.3 }}
     >
       <motion.span
-        className="block rotate-[-30deg] scale-[1.75]"
-        initial={{ x: "80px", y: "150%", rotate: "-30deg", scale: 1.5 }}
-        animate={{ x: "0", y: "0", rotate: "-30deg", scale: 1.5 }}
+        className="block w-[230px] h-[230px]"
+        initial={{ x: "80px", y: "100%", rotate: "-30deg" }}
+        animate={{ x: "-20%", y: "-20%", rotate: "-30deg" }}
         transition={{ delay: 0.5 }}
       >
         <Image

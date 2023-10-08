@@ -6,10 +6,10 @@ import ProfileImg from "@/components/atoms/profile-img/ProfileImg";
 
 const Hero = () => {
   return (
-    <header className="min-h-screen h-fit flex flex-col justify-center gap-y-20">
+    <header className="min-h-[calc(100vh - 46px)] h-fit flex flex-col justify-center gap-y-20">
       <Container>
         <motion.h1
-          className="relative self-end text-7xl md:text-9xl font-semibold"
+          className="relative max-w-full grid pt-[30px] self-end text-7xl md:mt-[30px] md:text-9xl font-semibold"
           style={{ clipPath: "inset( -100vw -100vw 0 0 )" }}
         >
           <ProfileImg />
@@ -26,7 +26,7 @@ const Hero = () => {
           initial={{ backgroundPosition: "0% 100%" }}
           animate={{ backgroundPosition: "0% 0%" }}
           transition={{ delay: 0.6 }}
-          className="text-3xl font-light bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-t from-[#1b1b1e] from-50% to-[#FFF5E0] to-50%"
+          className="text-3xl font-light bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-t from-[--background] from-50% to-[--foreground] to-50%"
         >
           Front-end developer
           <motion.span

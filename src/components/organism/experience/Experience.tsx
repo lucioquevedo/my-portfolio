@@ -33,7 +33,7 @@ const Experience = () => {
     <section ref={ref} id="experience" className="py-20">
       <Container>
         <H2
-          className="bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-r from-[#FFF5E0] from-50% to-[#1b1b1e] to-50%"
+          className="bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-r from-[--foreground] from-50% to-[--background] to-50%"
           style={{ backgroundPosition }}
         >
           Work Experience

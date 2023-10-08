@@ -3,9 +3,10 @@ import React from "react";
 import clsx from "clsx";
 import { ItemType } from "@/types/item.types";
 import { HTMLMotionProps, motion } from "framer-motion";
+import ListItemImg from "@/components/atoms/list-item-img/ListItemImg";
 
 const ListItem = ({
-  item: { itemTitle, subtitle, text, techList },
+  item: { itemTitle, subtitle, text, techList, image },
   className,
   ...props
 }: IProps) => {
@@ -31,6 +32,11 @@ const ListItem = ({
           </ul>
         )}
       </span>
+      {image && (
+        <span className="pt-10 md:col-span-2 justify-self-center">
+          <ListItemImg {...image} />
+        </span>
+      )}
     </motion.div>
   );
 };

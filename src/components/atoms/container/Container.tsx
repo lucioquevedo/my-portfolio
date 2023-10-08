@@ -8,7 +8,7 @@ const Container = ({ children, className, ...props }: IProps) => {
     <motion.div
       {...props}
       className={clsx(
-        "container mx-auto md:ml-28 2xl:mx-auto px-4 max-w-screen-sm",
+        "container mx-auto 2xl:mx-auto px-4 md:px-0 max-w-screen-sm",
         className
       )}
     >

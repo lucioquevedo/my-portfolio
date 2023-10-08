@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground: #1b1b1e;
+  --background: #fff5e0;
+  --decoration: #558b6e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #fff5e0;
+    --background: #1b1b1e;
+    --decoration: #d56f3e;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+} */
+
+@mixin lightmode() {
+  --foreground: #1b1b1e;
+  --background: #fff5e0;
+  --decoration: #558b6e;
+}
+
+@mixin darkmode() {
+  --foreground: #fff5e0;
+  --background: #1b1b1e;
+  --decoration: #d56f3e;
+}
+
+body {
+  @include lightmode();
+
+  &.is_inverted {
+    @include darkmode();
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include darkmode();
+
+    &.is_inverted {
+      @include lightmode();
+    }
+  }
+
+  background-color: var(--background);
+  color: var(--foreground);
+}

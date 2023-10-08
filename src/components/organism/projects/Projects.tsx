@@ -28,7 +28,7 @@ const Projects = () => {
     <section id="projects" ref={ref} className="pb-20">
       <Container>
         <H2
-          className="bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-r from-[#FFF5E0] from-50% to-[#1b1b1e] to-50%"
+          className="bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-r from-[--foreground] from-50% to-[--background] to-50%"
           style={{ backgroundPosition }}
         >
           Projects
@@ -62,5 +62,11 @@ const projectsList: ItemType[] = [
     ),
     subtitle: "Coder House - 2022",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut felis in turpis consequat scelerisque ut at diam. Quisque ultrices tellus ac pellentesque pellentesque. Pellentesque sit amet ullamcorper urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crascongue nec est sit amet blandit.",
+    image: {
+      src: "/rb-main.png",
+      width: 1920,
+      height: 1080,
+      alt: "RedBook Main Page",
+    },
   },
 ];
