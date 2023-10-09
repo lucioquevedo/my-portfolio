@@ -1,17 +1,17 @@
 # My Portfolio
 
-This is my personal portfolio. I used React, Bulma, Fontawesome, and ScrollMagic to develop it.
+This is my personal portfolio. I used NextJs, Tailwind, and Framer to develop it.
 
 ## Demo
 
-<https://lucio-quevedo.vercel.app/>
+<https://lucioquevedo.dev/>
 
 ## Run the project locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/Draug0/my-portfolio
+  git clone https://github.com/lucioquevedo/my-portfolio
 ```
 
 Go to the project directory
@@ -30,3 +30,4 @@ Start the server
 
 ```bash
   npm run start
+```
