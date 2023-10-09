@@ -25,7 +25,7 @@ const ListItem = ({
       <span>
         <p className="text-sm font-light">{text}</p>
         {techList && (
-          <ul className="flex wrap gap-x-2 mt-3 text-sm">
+          <ul className="flex flex-wrap gap-x-2 mt-3 text-sm">
             {techList.map((tech, idx) => (
               <li key={tech + idx}>{tech}</li>
             ))}

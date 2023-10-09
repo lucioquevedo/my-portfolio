@@ -61,7 +61,8 @@ const projectsList: ItemType[] = [
       </Anchor>
     ),
     subtitle: "Coder House - 2022",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut felis in turpis consequat scelerisque ut at diam. Quisque ultrices tellus ac pellentesque pellentesque. Pellentesque sit amet ullamcorper urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crascongue nec est sit amet blandit.",
+    text: "For my final project at Coder House, I conceived and brought to life Red Book, an online bookstore. This endeavor challenged me to create a comprehensive e-commerce web application that relied on Firebase for data storage. During the months of March and April 2022, I skillfully utilized React JS and Bulma to design and develop the platform. This project exemplifies my ability to deliver complex, fully functional web applications and manage projects to successful completion.",
+    techList: ["React", "Bulma", "Firebase"],
     image: {
       src: "/rb-main.png",
       width: 1920,

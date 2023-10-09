@@ -66,8 +66,16 @@ const expList: ItemType[] = [
       </Anchor>
     ),
     subtitle: "July 2022 - Present",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut felis in turpis consequat scelerisque ut at diam. Quisque ultrices tellus ac pellentesque pellentesque. Pellentesque sit amet ullamcorper urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crascongue nec est sit amet blandit.",
-    techList: ["NextJS", "TypeScript", "Express", "AWS"],
+    text: "In my role, I have demonstrated expertise in full-stack development and project leadership. I developed a client dashboard integrating multiple API services for MOX, optimized a Next.js landing page with multilingual support and introduced a Contentful-driven blog section. I also maintained scraper robots for data retrieval and created a real-time health-check service to monitor API status.",
+    techList: [
+      "NextJS",
+      "TypeScript",
+      "Express",
+      "AWS",
+      "Puppeteer",
+      "FCM",
+      "MongoDB",
+    ],
   },
   {
     itemTitle: (
@@ -82,6 +90,7 @@ const expList: ItemType[] = [
       </Anchor>
     ),
     subtitle: "June 2022 - August 2022",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut felis in turpis consequat scelerisque ut at diam. Quisque ultrices tellus ac pellentesque pellentesque. Pellentesque sit amet ullamcorper urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crascongue nec est sit amet blandit.",
+    text: "This project served as my introduction to the world of web development, where I led the development of Victoria Fernández's portfolio using Next.js in partnership with a small freelance team. It was a valuable experience that allowed me to demonstrate my commitment to learning and my ability to deliver a professional digital solution.",
+    techList: ["NextJS", "SASS", "Figma"],
   },
 ];
