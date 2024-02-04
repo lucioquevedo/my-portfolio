@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Container from "../container/Container";
-import { motion, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ThemeToggler = () => {
-  const [lightMode, setLightMode] = useState<"default" | "inverted">("default");
+  const [lightMode, setLightMode] = useState<theme>("default");
 
   const toggleTheme = () => {
     const localTheme = window.localStorage.getItem("lightMode");
@@ -19,10 +19,7 @@ const ThemeToggler = () => {
   };
 
   useEffect(() => {
-    console.log(lightMode);
-    const localTheme = window.localStorage.getItem("lightMode") as
-      | "default"
-      | "inverted";
+    const localTheme = window.localStorage.getItem("lightMode") as theme;
     setLightMode(localTheme || "default");
     if (localTheme === "inverted") {
       document.body.classList.add("is_inverted");
@@ -83,3 +80,6 @@ const ThemeToggler = () => {
 };
 
 export default ThemeToggler;
+
+// TYPES
+type theme = "default" | "inverted";
