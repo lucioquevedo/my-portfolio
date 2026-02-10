@@ -14,15 +14,11 @@ const Projects = () => {
     offset: ["0 1", "1 0"],
   });
 
-  const x = useTransform(scrollYProgress, [0.1, 0.3], ["-100px", "0px"]);
-  const opacity = useTransform(scrollYProgress, [0.1, 0.3], ["0", "1"]);
   const backgroundPosition = useTransform(
     scrollYProgress,
     [0, 0.3],
-    ["100% 100%", "0% 0%"]
+    ["100% 100%", "0% 0%"],
   );
-
-  const xs = [{ x, opacity }];
 
   return (
     <section id="projects" ref={ref} className="pb-20">
@@ -37,7 +33,9 @@ const Projects = () => {
           <ListItem
             item={project}
             key={idx}
-            style={{ x: xs[idx].x, opacity: xs[idx].opacity }}
+            scrollYProgress={scrollYProgress}
+            idx={idx}
+            extraMargin={idx == 0}
           />
         ))}
       </Container>
@@ -51,6 +49,28 @@ const projectsList: ItemType[] = [
   {
     itemTitle: (
       <Anchor
+        href="https://triana-khaki.vercel.app/"
+        target="_blank"
+        rel="noreferrer"
+        stroke="strong"
+        svgClass="h-5 w-5"
+      >
+        Triana
+      </Anchor>
+    ),
+    subtitle: "Freelance - 2026 (WIP)",
+    text: "As a freelance project and gift for a friendly construction company, I designed and developed their landing page. I used NextJS for the body and Framer Motion for the transition effects.",
+    techList: ["Next JS", "Tailwind", "Framer Motion"],
+    image: {
+      src: "/triana.png",
+      width: 1920,
+      height: 1080,
+      alt: "triana",
+    },
+  },
+  {
+    itemTitle: (
+      <Anchor
         href="https://red-book.vercel.app"
         target="_blank"
         rel="noreferrer"
@@ -61,7 +81,7 @@ const projectsList: ItemType[] = [
       </Anchor>
     ),
     subtitle: "Coder House - 2022",
-    text: "For my final project at Coder House, I conceived and brought to life Red Book, an online bookstore. This endeavor challenged me to create a comprehensive e-commerce web application that relied on Firebase for data storage. During the months of March and April 2022, I skillfully utilized React JS and Bulma to design and develop the platform. This project exemplifies my ability to deliver complex, fully functional web applications and manage projects to successful completion.",
+    text: "For my final project at Coder House, I created Red Book, an online bookstore. This endeavor challenged me to create a comprehensive e-commerce web application that relied on Firebase for data storage. During the months of March and April 2022, I utilized React JS and Bulma to design and develop the platform.",
     techList: ["React", "Bulma", "Firebase"],
     image: {
       src: "/rb-main.png",

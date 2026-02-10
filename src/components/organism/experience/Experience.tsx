@@ -14,20 +14,11 @@ const Experience = () => {
     offset: ["0 1", "1 0"],
   });
 
-  const x = useTransform(scrollYProgress, [0.2, 0.4], ["-100px", "0px"]);
-  const x2 = useTransform(scrollYProgress, [0.3, 0.5], ["-100px", "0px"]);
-  const opacity = useTransform(scrollYProgress, [0.2, 0.4], ["0", "1"]);
-  const opacity2 = useTransform(scrollYProgress, [0.3, 0.5], ["0", "1"]);
   const backgroundPosition = useTransform(
     scrollYProgress,
     [0.2, 0.4],
-    ["100% 100%", "0% 0%"]
+    ["100% 100%", "0% 0%"],
   );
-
-  const xs = [
-    { x, opacity },
-    { x: x2, opacity: opacity2 },
-  ];
 
   return (
     <section ref={ref} id="experience" className="py-20">
@@ -42,7 +33,8 @@ const Experience = () => {
           <ListItem
             item={exp}
             key={idx}
-            style={{ x: xs[idx].x, opacity: xs[idx].opacity }}
+            idx={idx}
+            scrollYProgress={scrollYProgress}
           />
         ))}
       </Container>
