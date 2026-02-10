@@ -65,11 +65,12 @@ const expList: ItemType[] = [
         MOX
       </Anchor>
     ),
-    subtitle: "July 2022 - Present",
+    subtitle: "July 2022 - April 2025",
     text: "In my role, I have demonstrated expertise in full-stack development and project leadership. I developed a client dashboard integrating multiple API services for MOX, optimized a Next.js landing page with multilingual support and introduced a Contentful-driven blog section. I also maintained scraper robots for data retrieval and created a real-time health-check service to monitor API status.",
     techList: [
       "NextJS",
       "TypeScript",
+      ".NET",
       "Express",
       "AWS",
       "Puppeteer",

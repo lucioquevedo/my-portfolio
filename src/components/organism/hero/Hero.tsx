@@ -28,7 +28,7 @@ const Hero = () => {
           transition={{ delay: 0.6 }}
           className="text-3xl font-light bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-t from-[--background] from-50% to-[--foreground] to-50%"
         >
-          Front-end developer
+          Full-stack developer
           <motion.span
             className="animate-blinker text-[--decoration]"
             initial={{ opacity: 0 }}
@@ -46,9 +46,10 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.4 }}
         >
-          Hello, I&apos;m Lucio, a 22-year-old front-end developer with a
-          passion for crafting seamless user experiences. I&apos;ve been
-          immersed in the world of web development for the past ~2.5 years,
+          Hello, I&apos;m Lucio, a{" "}
+          {calculateAge(new Date("2002-10-18").getTime())}-year-old full-stack
+          developer with a passion for crafting seamless user experiences.
+          I&apos;ve been immersed in the world of web development since 2021,
           honing my skills in a dynamic fintech startup environment. While my
           primary focus is front-end development, I also possess a strong
           foundation in back-end development.
@@ -56,6 +57,12 @@ const Hero = () => {
       </Container>
     </header>
   );
+};
+
+const calculateAge = (birthday: number) => {
+  var ageDifMs = Date.now() - birthday;
+  var ageDate = new Date(ageDifMs);
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
 };
 
 export default Hero;
