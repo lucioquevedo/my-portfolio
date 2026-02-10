@@ -25,7 +25,7 @@ const ProfileImg = () => {
           width={1159}
           height={1159}
           alt="profile"
-          quality={100}
+          quality={75}
         />
       </motion.span>
     </motion.figure>
