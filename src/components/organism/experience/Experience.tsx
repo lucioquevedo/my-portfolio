@@ -27,7 +27,7 @@ const Experience = () => {
           className="bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-r from-[--foreground] from-50% to-[--background] to-50%"
           style={{ backgroundPosition }}
         >
-          Work Experience
+          Relevant Experience
         </H2>
         {expList.map((exp, idx) => (
           <ListItem
@@ -58,7 +58,22 @@ const expList: ItemType[] = [
       </Anchor>
     ),
     subtitle: "July 2022 - April 2025",
-    text: "In my role, I have demonstrated expertise in full-stack development and project leadership. I developed a client dashboard integrating multiple API services for MOX, optimized a Next.js landing page with multilingual support and introduced a Contentful-driven blog section. I also maintained scraper robots for data retrieval and created a real-time health-check service to monitor API status.",
+    text: (
+      <span>
+        At MOX, I worked across the stack, building both user-facing features
+        and backend systems. Over time, I took ownership of several core
+        services, including a Direct Debit system built with .NET and AWS that
+        handled real customer payment flows.
+        <br />
+        <br />I also built automation tools that reduced payroll data processing
+        from hours (sometimes days) to minutes, and created internal monitoring
+        tools to improve reliability.
+        <br />
+        <br />
+        This is where I learned to think beyond features, focusing on
+        scalability, infrastructure, and long-term maintainability.
+      </span>
+    ),
     techList: [
       "NextJS",
       "TypeScript",
@@ -69,6 +84,37 @@ const expList: ItemType[] = [
       "FCM",
       "MongoDB",
     ],
+  },
+  {
+    itemTitle: (
+      <Anchor
+        href="https://spaak.ai"
+        target="_blank"
+        rel="noreferrer"
+        stroke="strong"
+        svgClass="h-5 w-5"
+      >
+        Spaak
+      </Anchor>
+    ),
+    subtitle: (
+      <span>
+        March 2024 <br />
+        (Short-term internship)
+      </span>
+    ),
+    text: (
+      <span>
+        At Spaak, I joined a small AI-focused startup team and worked on data
+        extraction tools supporting political monitoring workflows.
+        <br />
+        <br />I built web scrapers in Node.js and experienced firsthand how fast
+        product and technical decisions move in an early-stage environment. It
+        reinforced my interest in working in teams where ownership and iteration
+        go hand in hand.
+      </span>
+    ),
+    techList: ["TypeScript", "Cheerio"],
   },
   {
     itemTitle: (
