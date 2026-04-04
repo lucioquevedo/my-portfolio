@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import clsx from "clsx";
 import { ItemType } from "@/types/item.types";
 import {
@@ -14,7 +14,7 @@ const ListItem = ({
   item: { itemTitle, subtitle, text, techList, image },
   className,
   scrollYProgress,
-  extraMargin,
+  oneColumn,
   idx,
   ...props
 }: IProps) => {
@@ -37,20 +37,24 @@ const ListItem = ({
     <motion.div
       className={clsx(
         className,
-        "grid grid-cols-1 my-7 md:grid-cols-[180px_1fr] gap-y-3 md:gap-x-4",
+        "grid grid-cols-1 my-7 md:grid-cols-[190px_1fr] gap-y-3 md:gap-x-4",
         {
-          "mb-14": extraMargin,
+          "md:grid-cols-1": oneColumn,
         },
       )}
       {...props}
       style={{ x, opacity }}
     >
-      <span className="grid grid-cols-1 h-fit md:justify-items-end md:text-right">
+      <span
+        className={clsx("grid grid-cols-1 h-fit", {
+          "md:justify-items-end md:text-right": !oneColumn,
+        })}
+      >
         <h3 className="text-xl font-medium">{itemTitle}</h3>
-        <p className="text-sm font-light">{subtitle}</p>
+        <div className="text-sm font-light">{subtitle}</div>
       </span>
       <span>
-        <p className="text-sm font-light">{text}</p>
+        <div className="text-sm font-light">{text}</div>
         {techList && (
           <ul className="flex flex-wrap gap-x-2 mt-3 text-sm">
             {techList.map((tech, idx) => (
@@ -60,7 +64,7 @@ const ListItem = ({
         )}
       </span>
       {image && (
-        <span className="pt-10 md:col-span-2 justify-self-center">
+        <span className="pt-10 justify-self-center">
           <ListItemImg {...image} />
         </span>
       )}
@@ -74,5 +78,5 @@ interface IProps extends HTMLMotionProps<"div"> {
   item: ItemType;
   idx: number;
   scrollYProgress: MotionValue<number>;
-  extraMargin?: boolean;
+  oneColumn?: boolean;
 }

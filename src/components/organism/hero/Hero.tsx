@@ -28,7 +28,7 @@ const Hero = () => {
           transition={{ delay: 0.6 }}
           className="text-3xl font-light bg-clip-text text-transparent bg-[length:200%_200%] bg-gradient-to-t from-[--background] from-50% to-[--foreground] to-50%"
         >
-          Full-stack developer
+          Software developer
           <motion.span
             className="animate-blinker text-[--decoration]"
             initial={{ opacity: 0 }}
@@ -46,13 +46,20 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.4 }}
         >
-          Hello, I&apos;m Lucio, a{" "}
-          {calculateAge(new Date("2002-10-18").getTime())}-year-old full-stack
-          developer with a passion for crafting seamless user experiences.
-          I&apos;ve been immersed in the world of web development since 2021,
-          honing my skills in a dynamic fintech startup environment. While my
-          primary focus is front-end development, I also possess a strong
-          foundation in back-end development.
+          <span>
+            I’m a software engineer with 2+ years of experience working in a
+            fintech startup, where I built and maintained production systems
+            handling real customer data and payments.
+          </span>
+          <span className="my-4 block">
+            My main focus is backend and cloud engineering — designing APIs,
+            building automation systems, and ensuring reliability in production
+            environments.
+          </span>
+          <span>
+            I enjoy working on systems end-to-end, from design to deployment and
+            monitoring.
+          </span>
         </motion.p>
       </Container>
     </header>

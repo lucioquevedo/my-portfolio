@@ -35,7 +35,7 @@ const Projects = () => {
             key={idx}
             scrollYProgress={scrollYProgress}
             idx={idx}
-            extraMargin={idx == 0}
+            oneColumn
           />
         ))}
       </Container>
@@ -46,6 +46,53 @@ const Projects = () => {
 export default Projects;
 
 const projectsList: ItemType[] = [
+  {
+    itemTitle: "Direct Debit Management System",
+    subtitle: "MOX",
+    text: (
+      <span>
+        Backend system built with .NET and AWS to manage and process payments
+        across multiple clients.
+        <ul className="list-disc list-inside mt-2">
+          <li>Designed scalable APIs and payment workflows</li>
+          <li>Handled scheduling, status tracking, and multi-tenant logic</li>
+          <li>Processed thousands of payments weekly</li>
+          <li>Built with serverless AWS architecture</li>
+        </ul>
+      </span>
+    ),
+    techList: [".NET", "AWS", "PostgreSQL"],
+  },
+  {
+    itemTitle: "Data Scraping & Automation System",
+    subtitle: "MOX",
+    text: (
+      <span>
+        Automated payroll data extraction and processing pipeline.
+        <ul className="list-disc list-inside mt-2">
+          <li>Reduced processing time from hours/days to minutes</li>
+          <li>Implemented retry logic and exponential backoff</li>
+          <li>Integrated with backend services for automated workflows</li>
+        </ul>
+      </span>
+    ),
+    techList: ["Node.js", "Puppeteer"],
+  },
+  {
+    itemTitle: "Monitoring & Observability Tool",
+    subtitle: "MOX",
+    text: (
+      <span>
+        Internal tool to track system health and detect failures. .
+        <ul className="list-disc list-inside mt-2">
+          <li>Improved debugging and system visibility</li>
+          <li>Enabled faster issue detection</li>
+          <li>Provided real-time insights into system performance</li>
+        </ul>
+      </span>
+    ),
+    techList: ["Node.js", "TypeScript", "Next.js"],
+  },
   {
     itemTitle: (
       <Anchor
@@ -58,36 +105,24 @@ const projectsList: ItemType[] = [
         Triana
       </Anchor>
     ),
-    subtitle: "Freelance - 2026 (WIP)",
-    text: "As a freelance project and gift for a friendly construction company, I designed and developed their landing page. I used NextJS for the body and Framer Motion for the transition effects.",
+    subtitle: "Freelance",
+    text: (
+      <span>
+        Designed and developed a responsive landing page for a construction
+        company.
+        <ul className="list-disc list-inside mt-2">
+          <li>Built using Next.js and Tailwind</li>
+          <li>Implemented animations with Framer Motion</li>
+          <li>Focused on performance and clean UI</li>
+        </ul>
+      </span>
+    ),
     techList: ["Next JS", "Tailwind", "Framer Motion"],
     image: {
       src: "/triana.png",
       width: 1920,
       height: 1080,
       alt: "triana",
-    },
-  },
-  {
-    itemTitle: (
-      <Anchor
-        href="https://red-book.vercel.app"
-        target="_blank"
-        rel="noreferrer"
-        stroke="strong"
-        svgClass="h-5 w-5"
-      >
-        Red Book
-      </Anchor>
-    ),
-    subtitle: "Coder House - 2022",
-    text: "For my final project at Coder House, I created Red Book, an online bookstore. This endeavor challenged me to create a comprehensive e-commerce web application that relied on Firebase for data storage. During the months of March and April 2022, I utilized React JS and Bulma to design and develop the platform.",
-    techList: ["React", "Bulma", "Firebase"],
-    image: {
-      src: "/rb-main.png",
-      width: 1920,
-      height: 1080,
-      alt: "RedBook Main Page",
     },
   },
 ];

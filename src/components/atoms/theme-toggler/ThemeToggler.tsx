@@ -34,7 +34,7 @@ const ThemeToggler = () => {
   return (
     <Container>
       <motion.button
-        className="relative mt-3 rounded-full border-[1.5px] border-[--foreground] w-7 h-7 overflow-hidden hover:text-[--decoration] hover:border-[--decoration]"
+        className="relative mt-5 rounded-full border-[1.5px] border-[--foreground] w-7 h-7 overflow-hidden hover:text-[--decoration] hover:border-[--decoration]"
         type="button"
         onClick={toggleTheme}
         aria-label="change theme color"
